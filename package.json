@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "husky",
-    "precommit": "eslint ."
+    "precommit": "eslint . && prettier --check ."
   },
   "dependencies": {
     "@react-three/drei": "^9.105.4",
