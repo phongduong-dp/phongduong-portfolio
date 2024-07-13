@@ -8,10 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",
+    "prepare": "husky",
     "precommit": "eslint ."
-  },
-  "husky": {
-    "pre-commit": "npm run precommit"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.4",
