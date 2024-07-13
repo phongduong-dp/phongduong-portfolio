@@ -28,7 +28,11 @@
     "*.tsx": [
       "eslint --fix",
       "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
     ]
+
   },
   "dependencies": {
     "@react-three/drei": "^9.105.4",
