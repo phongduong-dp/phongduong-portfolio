@@ -7,11 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --fix",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "precommit": "npm run lint && npm run format"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "estlint --fix && prettier --write"
+      "pre-commit": "npm run precommit"
     }
   },
   "lint-staged": {
