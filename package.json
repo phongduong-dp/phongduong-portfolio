@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "precommit": "npm run lint && npm run format"
+    "precommit": "npm run lint"
   },
   "husky": {
     "hooks": {
