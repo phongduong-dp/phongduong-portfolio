@@ -1,4 +1,4 @@
-name: Check the source code
+name: Code Check
 
 run-name: ${{ github.actor }} is running GitHub Actions 🚀
 
