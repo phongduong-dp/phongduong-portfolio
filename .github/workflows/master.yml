@@ -11,25 +11,21 @@ on:
       - master
 
 jobs:
-  Install-packages:
-    name: Install Packages
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install packages
-        run: npm install
-
   Prettier:
     name: Prettier Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm install
       - name: Prettier
         run: npm run format
   ESLint:
     name: ESLint Check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v
+      - uses: actions/checkout@v2
+      - name: Install packages
+        run: npm install
       - name: Lint
         run: npm run lint
