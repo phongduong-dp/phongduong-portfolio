@@ -29,8 +29,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/phongduong-dp/portfolio.git
-   cd portfolio
+   git clone https://github.com/phongduong-dp/phongduong-portfolio
    ```
 
 2. **Install dependencies**:
@@ -56,4 +55,4 @@ This project is deployed on Vercel. Any push to the `main` branch will trigger a
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/phongduong-dp/portfolio/issues) if you want to contribute.
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/phongduong-dp/phongduong-portfolio/issues) if you want to contribute.
