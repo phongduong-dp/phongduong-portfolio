@@ -4,7 +4,7 @@ This is the repository for my personal portfolio website, showcasing my projects
 
 ## About Me
 
-I am a passionate software developer with a strong background in front-end web development and .NET Development. 
+I am a passionate software developer with a strong background in front-end web development and .NET Development.
 
 ## Technologies Used
 
@@ -27,25 +27,28 @@ I am a passionate software developer with a strong background in front-end web d
 To run this project locally, follow these steps:
 
 1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/phongduong-dp/portfolio.git
-    cd portfolio
-    ```
+
+   ```bash
+   git clone https://github.com/phongduong-dp/portfolio.git
+   cd portfolio
+   ```
 
 2. **Install dependencies**:
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 3. **Run the development server**:
-    ```bash
-    npm run dev
-    ```
+
+   ```bash
+   npm run dev
+   ```
 
 4. **Open your browser and visit**:
-    ```
-    http://localhost:3000
-    ```
+   ```
+   http://localhost:3000
+   ```
 
 ## Deployment
 
@@ -54,4 +57,3 @@ This project is deployed on Vercel. Any push to the `main` branch will trigger a
 ## Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/phongduong-dp/portfolio/issues) if you want to contribute.
-
