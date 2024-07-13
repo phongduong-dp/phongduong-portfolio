@@ -11,9 +11,7 @@
     "precommit": "npm run lint"
   },
   "husky": {
-    "hooks": {
-      "pre-commit": "npm run precommit"
-    }
+    "pre-commit": "npm run precommit"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.4",
