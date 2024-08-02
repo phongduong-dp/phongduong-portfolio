@@ -35,13 +35,13 @@ To run this project locally, follow these steps:
 2. **Install dependencies**:
 
    ```bash
-   npm install
+   yarn install
    ```
 
 3. **Run the development server**:
 
    ```bash
-   npm run dev
+   yarn run dev
    ```
 
 4. **Open your browser and visit**:
@@ -51,7 +51,7 @@ To run this project locally, follow these steps:
 
 ## Deployment
 
-This project is deployed on Vercel. Any push to the `main` branch will trigger a deployment to the production URL.
+This project is deployed on Vercel. Any push to the `master` branch will trigger a deployment to the production URL.
 
 ## Contributing
 
