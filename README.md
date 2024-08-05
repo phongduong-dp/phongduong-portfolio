@@ -14,6 +14,7 @@ I am a passionate software developer with a strong background in front-end web d
 - **React**: A JavaScript library for building user interfaces.
 - **Vercel**: Platform for frontend developers, providing global deployment and serverless functions.
 - **Framer Motion**: Framer Motion is a simple yet powerful motion library for React. It powers the amazing animations and interactions in Framer, the web builder for creative pros. Zero code, maximum speed.
+- **Aceternity UI**: Copy paste the most trending components and use them in your websites without having to worry about styling and animations.
 
 ## Features
 
