@@ -2,8 +2,17 @@ export const navItems = [
   { name: 'About', link: '#about' },
   { name: 'Projects', link: '#projects' },
   { name: 'Testimonials', link: '#testimonials' },
+  { name: 'Blog', link: '#blog' },
   { name: 'Contact', link: '#contact' },
 ];
+
+export const myInfo = {
+  name: 'Phong Duong',
+  title: 'Software Engineer',
+  email: 'duonghongphongdp@gmail.com',
+  description:
+    'I am a Frontend Developer with a passion for building interactive web applications. I specialize in React.js, Next.js, and TailwindCSS.',
+};
 
 export const gridItems = [
   {
@@ -38,7 +47,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: 'Tech enthusiast with a passion for development.',
+    title: 'Engineering enthusiast with a passion for problem solving.',
     description: '',
     className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
     imgClassName: '',
@@ -215,3 +224,6 @@ export const socialMedia = [
     img: '/link.svg',
   },
 ];
+
+export const techStackLeft = ['React.JS', 'Next.JS', 'TailwindCSS'];
+export const techStackRight = ['TypeScript', 'C#', 'Python'];
