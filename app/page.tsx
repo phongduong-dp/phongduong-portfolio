@@ -1,13 +1,9 @@
+'use client';
+
+import Grid from '@/components/Grid';
 import Hero from '@/components/Hero';
 import { FloatingNav } from '@/components/ui/FloatingNav';
-import { FaHome, FaUser, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
-
-const navItems = [
-  { name: 'Home', link: '/', icon: <FaHome /> },
-  { name: 'About', link: '/about', icon: <FaUser /> },
-  { name: 'Projects', link: '/projects', icon: <FaProjectDiagram /> },
-  { name: 'Contact', link: '/contact', icon: <FaEnvelope /> },
-];
+import { navItems } from '@/data';
 
 export default function Home() {
   return (
@@ -15,6 +11,7 @@ export default function Home() {
       <div className="w-full max-w-7xl">
         <FloatingNav navItems={navItems} />
         <Hero />
+        <Grid />
       </div>
     </main>
   );

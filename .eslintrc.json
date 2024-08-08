@@ -25,6 +25,7 @@
     "node_modules/",
     ".next/",
     "tailwind.config.ts",
-    "commitlint.config.js"
+    "commitlint.config.js",
+    "components/ui/"
   ]
 }
