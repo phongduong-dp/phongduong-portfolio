@@ -83,7 +83,13 @@ export const projects = [
     title: '3D Solar System Planets to Explore',
     des: 'Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.',
     img: '/p1.svg',
-    iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/fm.svg'],
+    iconLists: [
+      '/react.svg',
+      '/tailwindcss.svg',
+      '/ts.svg',
+      '/three.svg',
+      '/fm.svg',
+    ],
     link: 'https://github.com/adrianhajdin?tab=repositories',
   },
   {
@@ -91,7 +97,13 @@ export const projects = [
     title: 'Yoom - Video Conferencing App',
     des: 'Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.',
     img: '/p2.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/stream.svg', '/c.svg'],
+    iconLists: [
+      '/next.svg',
+      '/tailwindcss.svg',
+      '/ts.svg',
+      '/stream.svg',
+      '/c.svg',
+    ],
     link: 'https://github.com/adrianhajdin/zoom-clone',
   },
   {
@@ -99,7 +111,13 @@ export const projects = [
     title: 'AI Image SaaS - Canva Application',
     des: 'A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.',
     img: '/p3.svg',
-    iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/c.svg'],
+    iconLists: [
+      '/react.svg',
+      '/tailwindcss.svg',
+      '/ts.svg',
+      '/three.svg',
+      '/c.svg',
+    ],
     link: 'https://github.com/adrianhajdin/ai_saas_app',
   },
   {
@@ -107,74 +125,95 @@ export const projects = [
     title: 'Animated Apple Iphone 3D Website',
     des: 'Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..',
     img: '/p4.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/three.svg', '/gsap.svg'],
+    iconLists: [
+      '/next.svg',
+      '/tailwindcss.svg',
+      '/ts.svg',
+      '/three.svg',
+      '/gsap.svg',
+    ],
     link: 'https://github.com/adrianhajdin/iphone',
   },
 ];
 
-export const testimonials = [
+export const techStackListFirst = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+    icon: '/next.svg',
+    name: 'nextjs',
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+    icon: '/tailwindcss.svg',
+    name: 'tailwindcss',
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+    icon: '/git.svg',
+    name: 'github',
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+    icon: '/react.svg',
+    name: 'react',
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: 'Michael Johnson',
-    title: 'Director of AlphaStream Technologies',
+    icon: '/dotnet.svg',
+    name: 'dotnet',
+  },
+  {
+    icon: '/linux.svg',
+    name: 'linux',
+  },
+  {
+    icon: '/vite.svg',
+    name: 'vite',
   },
 ];
 
-export const companies = [
+export const techStackListSecond = [
   {
-    id: 1,
-    name: 'cloudinary',
-    img: '/cloud.svg',
-    nameImg: '/cloudName.svg',
+    icon: '/ts.svg',
+    name: 'typescript',
   },
   {
-    id: 2,
-    name: 'appwrite',
-    img: '/app.svg',
-    nameImg: '/appName.svg',
+    icon: '/python.svg',
+    name: 'python',
   },
   {
-    id: 3,
-    name: 'HOSTINGER',
-    img: '/host.svg',
-    nameImg: '/hostName.svg',
+    icon: '/c_sharp.svg',
+    name: 'c_sharp',
   },
   {
-    id: 4,
-    name: 'stream',
-    img: '/s.svg',
-    nameImg: '/streamName.svg',
+    icon: '/javascript.svg',
+    name: 'javascript',
   },
   {
-    id: 5,
-    name: 'docker.',
-    img: '/dock.svg',
-    nameImg: '/dockerName.svg',
+    icon: '/css.svg',
+    name: 'css',
+  },
+  {
+    icon: '/html.svg',
+    name: 'htmnl',
+  },
+];
+
+export const techStackListThird = [
+  {
+    icon: '/slack.svg',
+    name: 'slack',
+  },
+  {
+    icon: '/vscode.svg',
+    name: 'vscode',
+  },
+  {
+    icon: '/visualstudio.svg',
+    name: 'visualstudio',
+  },
+  {
+    icon: '/rider.svg',
+    name: 'rider',
+  },
+  {
+    icon: '/resharper.svg',
+    name: 'resharper',
   },
 ];
 
