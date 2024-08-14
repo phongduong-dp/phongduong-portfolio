@@ -1,5 +1,6 @@
 'use client';
 
+import Approach from '@/components/Approach';
 import Experience from '@/components/Experience';
 import Grid from '@/components/Grid';
 import Hero from '@/components/Hero';
@@ -18,6 +19,7 @@ export default function Home() {
         <TechStack />
         <RecentProjects />
         <Experience />
+        <Approach />
       </div>
     </main>
   );
