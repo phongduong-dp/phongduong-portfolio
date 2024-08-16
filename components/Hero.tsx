@@ -2,7 +2,7 @@ import React from 'react';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
-import { FaLocationArrow } from 'react-icons/fa';
+import { IoMdDownload } from 'react-icons/io';
 
 const Hero = () => {
   return (
@@ -36,8 +36,8 @@ const Hero = () => {
           </p>
           <a href="#about">
             <MagicButton
-              title="My Projects"
-              icon={<FaLocationArrow />}
+              title="Download my CV"
+              icon={<IoMdDownload />}
               position="right"
             />
           </a>
