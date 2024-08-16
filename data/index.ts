@@ -101,7 +101,7 @@ export const projects = [
       '/next.svg',
       '/tailwindcss.svg',
       '/ts.svg',
-      '/stream.svg',
+      '/linux.svg',
       '/c.svg',
     ],
     link: 'https://github.com/adrianhajdin/zoom-clone',
