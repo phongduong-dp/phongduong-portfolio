@@ -86,7 +86,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="relative flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-2xl border border-b-0 border-slate-800"
+            className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl border border-b-0 border-slate-800 md:h-16 md:w-16"
             style={{
               background: 'rgb(4,7,29)',
               backgroundColor:
@@ -95,7 +95,7 @@ export const InfiniteMovingCards = ({
             key={item.name}
           >
             <blockquote>
-              <div className="relative z-20 flex h-10 w-10 flex-row items-center justify-center">
+              <div className="relative z-20 flex h-6 w-6 flex-row items-center justify-center md:h-10 md:w-10">
                 <img
                   src={item.icon}
                   alt={item.name}
