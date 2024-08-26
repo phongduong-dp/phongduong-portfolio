@@ -1,7 +1,7 @@
 export const navItems = [
   { name: 'About', link: '#about' },
   { name: 'Projects', link: '#projects' },
-  { name: 'Blog', link: '#blog' },
+  { name: 'Blogs', link: '#blog' },
   { name: 'Contact', link: '#contact' },
 ];
 
@@ -9,14 +9,12 @@ export const myInfo = {
   name: 'Phong Duong',
   title: 'Software Engineer',
   email: 'duonghongphongdp@gmail.com',
-  description:
-    'I am a Frontend Developer with a passion for building interactive web applications. I specialize in React.js, Next.js, and TailwindCSS.',
 };
 
 export const gridItems = [
   {
     id: 1,
-    title: 'I prioritize client collaboration, fostering open communication ',
+    title: 'Tailoring development strategies for optimal your success',
     description: '',
     className: 'lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]',
     imgClassName: 'w-full h-full',
@@ -46,7 +44,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: 'Engineering enthusiast with a passion for problem solving.',
+    title: 'An engineer with a focus on crafting impactful solutions',
     description: '',
     className: 'lg:col-span-2 md:col-span-3 md:row-span-1',
     imgClassName: '',
@@ -57,8 +55,8 @@ export const gridItems = [
 
   {
     id: 5,
-    title: 'Currently building a JS Animation library',
-    description: 'Where am I',
+    title: 'Partnering with you from Concept to Completion',
+    description: 'How I work',
     className: 'md:col-span-3 md:row-span-2',
     imgClassName: 'absolute right-0 bottom-0 md:w-96 w-60',
     titleClassName: 'justify-center md:justify-start lg:justify-center',
@@ -80,59 +78,42 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: '3D Solar System Planets to Explore',
-    des: 'Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.',
-    img: '/p1.svg',
+    title: 'Nam Viet Store',
+    des: 'A dynamic platform designed to help users advertise their mechanical equipment and attract potential clients through strategic Search Engine Optimization (SEO) techniques.',
+    img: '/namviet-project.png',
     iconLists: [
+      'next.svg',
       '/react.svg',
       '/tailwindcss.svg',
       '/ts.svg',
-      '/three.svg',
-      '/fm.svg',
+      'vite.svg',
     ],
-    link: 'https://github.com/adrianhajdin?tab=repositories',
+    link: 'https://github.com/its-rav/namvietstore-fe',
   },
+
   {
     id: 2,
-    title: 'Yoom - Video Conferencing App',
-    des: 'Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.',
-    img: '/p2.svg',
-    iconLists: [
-      '/next.svg',
-      '/tailwindcss.svg',
-      '/ts.svg',
-      '/linux.svg',
-      '/c.svg',
-    ],
-    link: 'https://github.com/adrianhajdin/zoom-clone',
+    title: 'React Weather Application',
+    des: 'Check the weather around you and all over the world at a glance. Rely on the accurate weather forecast and adjust your schedule to the weather coming in.',
+    img: '/weather-project.png',
+    iconLists: ['/react.svg', '/tailwindcss.svg', '/ts.svg'],
+    link: 'https://github.com/phongduong-dp/weather-app',
   },
   {
     id: 3,
-    title: 'AI Image SaaS - Canva Application',
-    des: 'A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.',
-    img: '/p3.svg',
-    iconLists: [
-      '/react.svg',
-      '/tailwindcss.svg',
-      '/ts.svg',
-      '/three.svg',
-      '/c.svg',
-    ],
-    link: 'https://github.com/adrianhajdin/ai_saas_app',
+    title: 'Space X Clone Website',
+    des: 'HTML/CSS/JS SpaceX website clone project. It is not the entire website, but the homepage, a few inner pages with the CSS animations, mobile menu and the JavaScript countdown effect.',
+    img: '/spaceX-project.png',
+    iconLists: ['/html.svg', '/css.svg', '/javascript.svg'],
+    link: 'https://github.com/phongduong-dp/spacex-clone',
   },
   {
     id: 4,
-    title: 'Animated Apple Iphone 3D Website',
-    des: 'Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..',
-    img: '/p4.svg',
-    iconLists: [
-      '/next.svg',
-      '/tailwindcss.svg',
-      '/ts.svg',
-      '/three.svg',
-      '/gsap.svg',
-    ],
-    link: 'https://github.com/adrianhajdin/iphone',
+    title: 'Construction Management Revit Plug-in',
+    des: 'A plug-in using C# implemented Revit API that connects Revit BIM model with MS Project to update construction schedule and concrete quantity in real-time.',
+    img: '/revit-project.png',
+    iconLists: ['c_sharp.svg', 'dotnet.svg', 'visualstudio.svg'],
+    link: 'https://www.youtube.com/watch?v=Lc-XQVOkZk8',
   },
 ];
 
@@ -237,15 +218,21 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
+    name: 'GitHub',
     img: '/git.svg',
+    url: 'https://github.com/phongduong-dp',
   },
   {
     id: 2,
+    name: 'Twitter',
     img: '/twit.svg',
+    url: 'https://x.com/DngHngPhong2',
   },
   {
     id: 3,
+    name: 'LinkedIn',
     img: '/link.svg',
+    url: 'https://www.linkedin.com/in/phong-duong-hong-3557a8190/',
   },
 ];
 
