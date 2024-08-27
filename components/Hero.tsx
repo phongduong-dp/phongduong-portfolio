@@ -4,6 +4,10 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
 import { IoMdDownload } from 'react-icons/io';
 
+const handleDownload = () => {
+  window.open('/PhongDuongCV.pdf', '_blank');
+};
+
 const Hero = () => {
   return (
     <div className="pb-20 pt-36">
@@ -34,13 +38,12 @@ const Hero = () => {
           <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
             Hi, I&apos;m Phong Duong, a software engineer based in Vietnam.
           </p>
-          <a href="#about">
-            <MagicButton
-              title="Download my CV"
-              icon={<IoMdDownload />}
-              position="right"
-            />
-          </a>
+          <MagicButton
+            title="Download my CV"
+            icon={<IoMdDownload />}
+            position="right"
+            handleClick={handleDownload}
+          />
         </div>
       </div>
     </div>
