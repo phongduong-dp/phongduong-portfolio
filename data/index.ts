@@ -1,7 +1,7 @@
 export const navItems = [
   { name: 'About', link: '#about' },
   { name: 'Projects', link: '#projects' },
-  { name: 'Blogs', link: '#blog' },
+  { name: 'Blogs', link: '/blogs' },
   { name: 'Contact', link: '#contact' },
 ];
 
@@ -209,7 +209,7 @@ export const workExperience = [
   {
     id: 2,
     title: 'Application Developer',
-    desc: 'Developed and maintained WPF applications, created automation tools, and built custom plugins using C# .NET, ensuring seamless integration with existing systems.',
+    desc: 'Developed and maintained applications, created automation tools, and built custom plugins using C# .NET, ensuring seamless integration with existing systems.',
     className: 'md:col-span-2', // change to md:col-span-2
     thumbnail: '/exp2.svg',
   },
@@ -236,5 +236,5 @@ export const socialMedia = [
   },
 ];
 
-export const techStackLeft = ['React.JS', 'Next.JS', 'TailwindCSS'];
+export const techStackLeft = ['React.JS', 'Next.JS', '.NET'];
 export const techStackRight = ['TypeScript', 'C#', 'Python'];
