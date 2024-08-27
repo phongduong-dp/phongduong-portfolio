@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import MagicButton from './ui/MagicButton';
 import { FaLocationArrow } from 'react-icons/fa';
@@ -35,8 +36,9 @@ const Footer = () => {
             <div
               key={item.id}
               className="mt-5 flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-black-300 bg-black-200 bg-opacity-75 saturate-150 backdrop-blur-lg backdrop-filter"
+              onClick={() => window.open(item.url, '_blank')}
             >
-              <img src={item.img} alt={item.id} width={20} height={20} />
+              <img src={item.img} alt={item.name} width={20} height={20} />
             </div>
           ))}
         </div>
