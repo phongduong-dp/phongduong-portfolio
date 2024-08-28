@@ -16,7 +16,7 @@ const TechStack = () => {
         <InfiniteMovingCards
           items={techStackListFirst}
           direction="right"
-          speed="slow"
+          speed="normal"
           pauseOnHover={true}
         />
       </div>
@@ -24,7 +24,7 @@ const TechStack = () => {
         <InfiniteMovingCards
           items={techStackListSecond}
           direction="left"
-          speed="slow"
+          speed="normal"
           pauseOnHover={true}
         />
       </div>
@@ -32,7 +32,7 @@ const TechStack = () => {
         <InfiniteMovingCards
           items={techStackListThird}
           direction="right"
-          speed="slow"
+          speed="normal"
           pauseOnHover={true}
         />
       </div>
