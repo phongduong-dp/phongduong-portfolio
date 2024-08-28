@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
 import { BoxesCore } from '@/components/ui/BackGroundBoxes';
-import { cn } from '@/lib/utils';
 import MagicButton from '@/components/ui/MagicButton';
 import { FaHome } from 'react-icons/fa';
+import { TextGenerateEffect } from './ui/TextGenerateEffect';
 
 export function BackgroundBoxes() {
   return (
@@ -11,13 +11,10 @@ export function BackgroundBoxes() {
       <div className="pointer-events-none absolute inset-0 z-20 h-full w-full bg-slate-900 [mask-image:radial-gradient(transparent,white)]" />
 
       <BoxesCore />
-      <h1
-        className={cn(
-          'relative z-20 text-xl font-bold uppercase text-white md:text-4xl'
-        )}
-      >
-        Coming Soon
-      </h1>
+      <TextGenerateEffect
+        words="Coming Soon"
+        className="text-center text-[40px] md:text-5xl lg:text-6xl"
+      />
       <p className="relative z-20 mt-2 text-center text-neutral-300">
         Sharing insights and expert tips on technology and engineering to
         enhance your understanding and approach to modern challenges.
