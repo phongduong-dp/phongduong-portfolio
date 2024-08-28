@@ -201,17 +201,17 @@ export const techStackListThird = [
 export const workExperience = [
   {
     id: 1,
-    title: 'Frontend Engineer Intern',
-    desc: 'Assisted in the development of a web-based platform using ReactJS and NextJS, enhancing interactivity.',
-    className: 'md:col-span-2',
-    thumbnail: '/exp1.svg',
-  },
-  {
-    id: 2,
     title: 'Application Developer',
     desc: 'Developed and maintained applications, created automation tools, and built custom plugins using C# .NET, ensuring seamless integration with existing systems.',
     className: 'md:col-span-2', // change to md:col-span-2
     thumbnail: '/exp2.svg',
+  },
+  {
+    id: 2,
+    title: 'Frontend Engineer Intern',
+    desc: 'Assisted in the development of a web-based platform using ReactJS and NextJS, enhancing interactivity.',
+    className: 'md:col-span-2',
+    thumbnail: '/exp1.svg',
   },
 ];
 
