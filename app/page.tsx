@@ -1,8 +1,28 @@
+'use client';
+
+import Approach from '@/components/Approach';
+import Experience from '@/components/Experience';
+import Footer from '@/components/Footer';
+import Grid from '@/components/Grid';
+import Hero from '@/components/Hero';
+import RecentProjects from '@/components/RecentProjects';
+import TechStack from '@/components/TechStack';
+import { FloatingNav } from '@/components/ui/FloatingNav';
+import { navItems } from '@/data';
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-2xl font-bold text-red-700">Phong Duong Portfolio</h1>
-      <p>Get to know Phong Duong</p>
+    <main className="relative mx-auto flex flex-col items-center justify-center overflow-clip bg-black-100 px-5 sm:px-10">
+      <div className="w-full max-w-7xl">
+        <FloatingNav navItems={navItems} />
+        <Hero />
+        <Grid />
+        <TechStack />
+        <RecentProjects />
+        <Experience />
+        <Approach />
+        <Footer />
+      </div>
     </main>
   );
 }
