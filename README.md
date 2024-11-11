@@ -10,7 +10,7 @@ I am a passionate software developer with a strong background in front-end web d
 
 - **Next.js**: A React framework for building fast and scalable web applications.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **JavaScript**: The primary programming language for the front-end.
+- **TypeScript**: The primary programming language for the front-end.
 - **React**: A JavaScript library for building user interfaces.
 - **Vercel**: Platform for frontend developers, providing global deployment and serverless functions.
 - **Framer Motion**: Framer Motion is a simple yet powerful motion library for React. It powers the amazing animations and interactions in Framer, the web builder for creative pros. Zero code, maximum speed.
@@ -20,8 +20,7 @@ I am a passionate software developer with a strong background in front-end web d
 
 - **Responsive Design**: The website is fully responsive, ensuring a great user experience on both desktop and mobile devices.
 - **Project Showcase**: Detailed sections for each of my projects, including descriptions, technologies used, and links to live demos and source code.
-- **Blog**: A blog section where I share my thoughts on various tech topics and document my learning journey.
-- **Contact Form**: A contact form to allow visitors to get in touch with me easily.
+- **Blogs**: A blog section where I share my thoughts on various tech topics and document my learning journey.
 
 ## Installation
 

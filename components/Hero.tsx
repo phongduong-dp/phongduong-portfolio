@@ -2,7 +2,11 @@ import React from 'react';
 import { Spotlight } from './ui/Spotlight';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
-import { FaLocationArrow } from 'react-icons/fa';
+import { IoMdDownload } from 'react-icons/io';
+
+const handleDownload = () => {
+  window.open('/PhongDuongCV.pdf', '_blank');
+};
 
 const Hero = () => {
   return (
@@ -24,7 +28,7 @@ const Hero = () => {
       <div className="relative z-10 my-20 flex justify-center">
         <div className="flex max-w-[89vw] flex-col items-center justify-center md:max-w-2xl lg:max-w-[60vw]">
           <h2 className="max-w-80 text-center text-xs uppercase tracking-widest text-blue-100">
-            Explore My Creations
+            Explore my homeground
           </h2>
 
           <TextGenerateEffect
@@ -34,13 +38,12 @@ const Hero = () => {
           <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
             Hi, I&apos;m Phong Duong, a software engineer based in Vietnam.
           </p>
-          <a href="#about">
-            <MagicButton
-              title="My Projects"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <MagicButton
+            title="Download my CV"
+            icon={<IoMdDownload />}
+            position="right"
+            handleClick={handleDownload}
+          />
         </div>
       </div>
     </div>
