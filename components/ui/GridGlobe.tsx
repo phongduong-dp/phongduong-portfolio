@@ -1,10 +1,14 @@
 'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
 const World = dynamic(() => import('./Globe').then((m) => m.World), {
   ssr: false,
+  loading: () => (
+    <div className="flex h-[400px] w-full items-center justify-center">
+      <div className="h-32 w-32 animate-spin rounded-full border-b-2 border-t-2 border-purple"></div>
+    </div>
+  ),
 });
 
 export function GlobeDemo() {
@@ -395,13 +399,16 @@ export function GlobeDemo() {
   ];
 
   return (
-    <div className="absolute -left-5 top-36 flex h-full w-full items-center justify-center md:top-40">
-      <div className="relative mx-auto h-96 w-full max-w-7xl overflow-hidden px-4">
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 h-40 w-full select-none bg-gradient-to-b from-transparent to-white dark:to-black" />
-        <div className="absolute z-10 h-72 w-full md:h-full">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
-      </div>
+    <div className="h-[400px] w-full">
+      <Suspense
+        fallback={
+          <div className="flex h-full w-full items-center justify-center">
+            <div className="h-32 w-32 animate-spin rounded-full border-b-2 border-t-2 border-purple"></div>
+          </div>
+        }
+      >
+        <World data={sampleArcs} globeConfig={globeConfig} />
+      </Suspense>
     </div>
   );
 }
