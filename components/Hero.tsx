@@ -1,8 +1,11 @@
-import React from 'react';
-import { Spotlight } from './ui/Spotlight';
+import React, { Suspense, lazy } from 'react';
 import { TextGenerateEffect } from './ui/TextGenerateEffect';
 import MagicButton from './ui/MagicButton';
 import { IoMdDownload } from 'react-icons/io';
+
+const Spotlight = lazy(() =>
+  import('./ui/Spotlight').then((mod) => ({ default: mod.Spotlight }))
+);
 
 const handleDownload = () => {
   window.open('/PhongDuongCV.pdf', '_blank');
@@ -12,15 +15,17 @@ const Hero = () => {
   return (
     <div className="pb-20 pt-36">
       <div>
-        <Spotlight
-          className="-left-10 -top-40 h-screen md:-left-32 md:-top-20"
-          fill="white"
-        />
-        <Spotlight
-          className="left-full top-10 h-[80vh] w-[50vw]"
-          fill="white"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
+        <Suspense fallback={null}>
+          <Spotlight
+            className="-left-10 -top-40 h-screen md:-left-32 md:-top-20"
+            fill="white"
+          />
+          <Spotlight
+            className="left-full top-10 h-[80vh] w-[50vw]"
+            fill="white"
+          />
+          <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
+        </Suspense>
       </div>
       <div className="absolute left-0 top-0 flex h-screen w-full items-center justify-center bg-white bg-grid-black/[0.03] dark:bg-black-100 dark:bg-grid-white/[0.03]">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black-100" />
@@ -50,4 +55,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);
