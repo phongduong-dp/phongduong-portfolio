@@ -1,7 +1,7 @@
 'use client';
 import { cn } from '@/lib/utils';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import React, { useMemo, useRef } from 'react';
+import React, { useMemo, useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
 export const CanvasRevealEffect = ({
@@ -23,23 +23,52 @@ export const CanvasRevealEffect = ({
   dotSize?: number;
   showGradient?: boolean;
 }) => {
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    const element = document.querySelector('.canvas-container');
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
   return (
-    <div className={cn('relative h-full w-full bg-white', containerClassName)}>
+    <div
+      className={cn(
+        'canvas-container relative h-full w-full bg-white',
+        containerClassName
+      )}
+    >
       <div className="h-full w-full">
-        <DotMatrix
-          colors={colors ?? [[0, 255, 255]]}
-          dotSize={dotSize ?? 3}
-          opacities={
-            opacities ?? [0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1]
-          }
-          shader={`
+        {isVisible && (
+          <DotMatrix
+            colors={colors ?? [[0, 255, 255]]}
+            dotSize={dotSize ?? 3}
+            opacities={
+              opacities ?? [0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1]
+            }
+            shader={`
               float animation_speed_factor = ${animationSpeed.toFixed(1)};
               float intro_offset = distance(u_resolution / 2.0 / u_total_size, st2) * 0.01 + (random(st2) * 0.15);
               opacity *= step(intro_offset, u_time * animation_speed_factor);
               opacity *= clamp((1.0 - step(intro_offset + 0.1, u_time * animation_speed_factor)) * 1.25, 1.0, 1.25);
             `}
-          center={['x', 'y']}
-        />
+            center={['x', 'y']}
+          />
+        )}
       </div>
       {showGradient && (
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950 to-[84%]" />
@@ -65,7 +94,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   shader = '',
   center = ['x', 'y'],
 }) => {
-  const uniforms = React.useMemo(() => {
+  const uniforms = useMemo(() => {
     let colorsArray = [
       colors[0],
       colors[0],
@@ -150,27 +179,27 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
                 ? 'st.y -= abs(floor((mod(u_resolution.y, u_total_size) - u_dot_size) * 0.5));'
                 : ''
             }
-      float opacity = step(0.0, st.x);
-      opacity *= step(0.0, st.y);
+            float opacity = step(0.0, st.x);
+            opacity *= step(0.0, st.y);
 
-      vec2 st2 = vec2(int(st.x / u_total_size), int(st.y / u_total_size));
+            vec2 st2 = vec2(int(st.x / u_total_size), int(st.y / u_total_size));
 
-      float frequency = 5.0;
-      float show_offset = random(st2);
-      float rand = random(st2 * floor((u_time / frequency) + show_offset + frequency) + 1.0);
-      opacity *= u_opacities[int(rand * 10.0)];
-      opacity *= 1.0 - step(u_dot_size / u_total_size, fract(st.x / u_total_size));
-      opacity *= 1.0 - step(u_dot_size / u_total_size, fract(st.y / u_total_size));
+            float frequency = 5.0;
+            float show_offset = random(st2);
+            float rand = random(st2 * floor((u_time / frequency) + show_offset + frequency) + 1.0);
+            opacity *= u_opacities[int(rand * 10.0)];
+            opacity *= 1.0 - step(u_dot_size / u_total_size, fract(st.x / u_total_size));
+            opacity *= 1.0 - step(u_dot_size / u_total_size, fract(st.y / u_total_size));
 
-      vec3 color = u_colors[int(show_offset * 6.0)];
+            vec3 color = u_colors[int(show_offset * 6.0)];
 
-      ${shader}
+            ${shader}
 
-      fragColor = vec4(color, opacity);
-      fragColor.rgb *= fragColor.a;
+            fragColor = vec4(color, opacity);
+            fragColor.rgb *= fragColor.a;
         }`}
       uniforms={uniforms}
-      maxFps={60}
+      maxFps={30}
     />
   );
 };
@@ -184,7 +213,7 @@ type Uniforms = {
 const ShaderMaterial = ({
   source,
   uniforms,
-  maxFps = 60,
+  maxFps = 30,
 }: {
   source: string;
   hovered?: boolean;
@@ -250,11 +279,10 @@ const ShaderMaterial = ({
     preparedUniforms['u_time'] = { value: 0, type: '1f' };
     preparedUniforms['u_resolution'] = {
       value: new THREE.Vector2(size.width * 2, size.height * 2),
-    }; // Initialize u_resolution
+    };
     return preparedUniforms;
   };
 
-  // Shader material
   const material = useMemo(() => {
     const materialObject = new THREE.ShaderMaterial({
       vertexShader: `
@@ -289,7 +317,7 @@ const ShaderMaterial = ({
   );
 };
 
-const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
+const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 30 }) => {
   return (
     <Canvas className="absolute inset-0 h-full w-full">
       <ShaderMaterial source={source} uniforms={uniforms} maxFps={maxFps} />
